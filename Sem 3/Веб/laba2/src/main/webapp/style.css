@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    height: 100%;
+    background-image: url("static/background-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --header-color: rgba(230, 230, 230, 0.5);
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+header > p {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.input-area {
+    display: inline-block;
+    margin: 10px;
+}
+
+.input-area legend div {
+    display: inline-block;
+    margin: 1px;
+}
+
+#graph_canvas {
+    display: inline-block;
+    background: white;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(128, 128, 128);
+}
+
+th, td {
+    padding: 1px;
+    border: 1px solid rgb(128, 128, 128);
+    text-align: center;
+    font-weight: normal;
+}
+
+button {
+    cursor: pointer;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+}
+
+#radius_select {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background: white;
+}
+
+label, legend {
+    font-size: 16px;
+}

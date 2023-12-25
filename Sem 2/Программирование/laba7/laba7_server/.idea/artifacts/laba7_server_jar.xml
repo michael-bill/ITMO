@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="laba7_server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/laba7_server_jar</output-path>
+    <root id="archive" name="laba7_server.jar">
+      <element id="module-output" name="laba7_server" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

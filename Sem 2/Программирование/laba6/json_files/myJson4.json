@@ -1,0 +1,49 @@
+{
+    "1": {
+        "owner": {
+            "eyeColor": "BLUE",
+            "nationality": "JAPAN",
+            "name": "Михаил",
+            "weight": 94,
+            "location": {
+                "name": "Tokyo",
+                "x": 123,
+                "y": 321
+            },
+            "hairColor": "BROWN"
+        },
+        "price": 30000,
+        "name": "Холодильник",
+        "coordinates": {
+            "x": 15,
+            "y": 20
+        },
+        "manufactureCost": 100,
+        "id": 1,
+        "creationDate": "2023-02-15T21:48:07.463541+03:00[Europe/Moscow]"
+    },
+    "2": {
+        "owner": {
+            "eyeColor": "BLUE",
+            "nationality": "JAPAN",
+            "name": "Василий",
+            "weight": 94,
+            "location": {
+                "name": "Tokyo",
+                "x": 123,
+                "y": 321
+            },
+            "hairColor": "BROWN"
+        },
+        "unitOfMeasure": "PCS",
+        "price": 30000,
+        "name": "Холодильник",
+        "coordinates": {
+            "x": 1234,
+            "y": 5235
+        },
+        "manufactureCost": 100,
+        "id": 2,
+        "creationDate": "2023-02-15T21:48:07.463959+03:00[Europe/Moscow]"
+    }
+}

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="laba5_proj:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/laba5_proj_jar</output-path>
+    <root id="archive" name="laba5_proj.jar">
+      <element id="module-output" name="laba5_proj" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20220924/json-20220924.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

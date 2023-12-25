@@ -1,0 +1,38 @@
+package org.michaelb.lab3.story;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+public class Homes extends ArrayList<Home> implements Seeable {
+
+    @Override
+    public void seeing(AirBalloon balloon) {
+        System.out.print("Дома " + SeeingType.SEEM_VERY_TINY);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Homes other) {
+            if (other.size() == this.size()) {
+                for (int i = 0; i < this.size(); i++) {
+                    if (!this.get(i).equals(other.get(i)))
+                        return  false;
+                }
+            } else return false;
+        } else return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this);
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < this.size(); i++)
+            result += this.get(i).toString() + "\n";
+        return result;
+    }
+}

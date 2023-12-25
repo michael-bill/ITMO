@@ -1,0 +1,18 @@
+{
+    "1": {
+        "owner": {
+            "eyeColor": "BLUE",
+            "name": "ASd",
+            "weight": 94,
+            "hairColor": "BROWN"
+        },
+        "price": 100,
+        "name": "Холодильник",
+        "coordinates": {
+            "x": 12,
+            "y": 12
+        },
+        "id": 1,
+        "creationDate": "2023-02-15T20:57:09.131173+03:00[Europe/Moscow]"
+    }
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="src.view.MainWindow">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="774" height="429"/>
+    </constraints>
+    <properties>
+      <font/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="13dfa" class="javax.swing.JLabel" binding="mainWindowTitle">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="20" left="20" bottom="20" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <font size="28" style="1"/>
+          <text resource-bundle="strings_en_CA" key="mainWindowTitle"/>
+        </properties>
+      </component>
+      <scrollpane id="a6515" binding="paneMain">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="100.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </scrollpane>
+      <grid id="e4cf0" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="6941c" class="javax.swing.JButton" binding="buttonCommandMode">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <text resource-bundle="strings_en_CA" key="buttonCommandModeText"/>
+            </properties>
+          </component>
+          <component id="82082" class="javax.swing.JButton" binding="buttonVisualMode">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <text resource-bundle="strings_en_CA" key="buttonVisualModeText"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="7fa18" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="328d6" class="javax.swing.JTextField" binding="textFieldFilter">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag weightx="5.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+            </properties>
+          </component>
+          <component id="5f4cf" class="javax.swing.JButton" binding="buttonFilter">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <text resource-bundle="strings_en_CA" key="filter"/>
+            </properties>
+          </component>
+          <component id="c94ce" class="javax.swing.JButton" binding="buttonReset">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <text resource-bundle="strings_en_CA" key="reset"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="f258c" class="javax.swing.JLabel" binding="labelYou">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="5" bottom="5" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text resource-bundle="strings_en_CA" key="you"/>
+        </properties>
+      </component>
+      <component id="ebc33" class="javax.swing.JComboBox" binding="comboBoxLanguage">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

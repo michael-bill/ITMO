@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/mihailbilosickij/Yandex.Disk.localized/ITMO/Программирование/Laba4/Laba4_proj</OriginalElement>
+  <nodes>
+    <node x="168.74853062677414" y="1008.4320853726222">org.michaelb.lab3.story.objects.They</node>
+    <node x="843.3480741176277" y="329.99999999999994">org.michaelb.lab3.story.abstractions.Human</node>
+    <node x="1532.5999608763705" y="636.5">org.michaelb.lab3.story.objects.Homes</node>
+    <node x="1287.531104131221" y="-3.662798324839798">org.michaelb.lab3.story.objects.AirBalloon</node>
+    <node x="753.2234915031446" y="551.4320853726222">org.michaelb.lab3.story.interfaces.Laughable</node>
+    <node x="597.4436823524434" y="95.04476657742703">org.michaelb.lab3.story.objects.Wind</node>
+    <node x="1594.1547729398235" y="146.9969482421875">org.michaelb.lab3.story.exceptions.NoMoreFuelException</node>
+    <node x="788.5171350316969" y="986.4320853726222">org.michaelb.lab3.story.objects.FlowerCity</node>
+    <node x="1370.2857394366197" y="909.5">org.michaelb.lab3.story.abstractions.City</node>
+    <node x="1586.0454649525386" y="887.5">org.michaelb.lab3.story.objects.Residents</node>
+    <node x="380.23779119015444" y="528.9320853726222">org.michaelb.lab3.story.objects.ConfusionGuy.Head</node>
+    <node x="440.99853062677414" y="724.4320853726222">org.michaelb.lab3.story.objects.ConfusionGuy</node>
+    <node x="284.0470535759929" y="153.33741984527842">org.michaelb.lab3.story.objects.Hat</node>
+    <node x="1261.4853963315186" y="330.0">org.michaelb.lab3.story.enums.SeeingType</node>
+    <node x="974.5479339770948" y="495.43208537262217">org.michaelb.lab3.story.objects.Shorty</node>
+    <node x="715.9985306267741" y="790.9320853726222">org.michaelb.lab3.story.objects.Every</node>
+    <node x="912.746210648421" y="142.76666259765625">org.michaelb.lab3.story.interfaces.Flyable</node>
+    <node x="401.4568639601074" y="1052.9320853726222">org.michaelb.lab3.story.objects.ConfusionGuy.Hand</node>
+    <node x="857.9985306267741" y="735.9320853726222">org.michaelb.lab3.story.objects.Grumpy</node>
+    <node x="1606.1547729398235" y="407.2965840859781">org.michaelb.lab3.story.objects.Home</node>
+    <node x="145.3604242104999" y="802.4320853726222">org.michaelb.lab3.story.exceptions.NoHatOnException</node>
+    <node x="1836.407147766217" y="476.91585435075">org.michaelb.lab3.story.interfaces.Seeable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.michaelb.lab3.story.objects.Residents" target="org.michaelb.lab3.story.objects.Shorty" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1633.7954649525386" y="832.0" />
+      <point x="1274.6547339593112" y="832.0" />
+      <point x="1274.6547339593112" y="692.4320853726222" />
+      <point x="1078.0479339770948" y="692.4320853726222" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Residents" target="org.michaelb.lab3.story.enums.SeeingType" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1633.7954649525386" y="832.0" />
+      <point x="1274.6547339593112" y="832.0" />
+      <point x="1274.6547339593112" y="812.0" />
+      <point x="1306.0" y="812.0" />
+      <point x="1306.0" y="603.0" />
+      <point x="1373.9853963315186" y="603.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Residents" target="org.michaelb.lab3.story.interfaces.Seeable" relationship="REALIZATION">
+      <point x="47.75" y="-71.0" />
+      <point x="1729.2954649525386" y="805.5649050721389" />
+      <point x="1931.407147766217" y="805.5649050721389" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy.Hand" target="org.michaelb.lab3.story.objects.ConfusionGuy" relationship="INNER_CLASS">
+      <point x="73.0" y="-38.0" />
+      <point x="583.9568639601074" y="975.4320853726222" />
+      <point x="567.9985306267741" y="975.4320853726222" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Every" target="org.michaelb.lab3.story.interfaces.Laughable" relationship="REALIZATION">
+      <point x="0.0" y="-38.0" />
+      <point x="776.9985306267741" y="702.4320853726222" />
+      <point x="826.7234915031446" y="702.4320853726222" />
+      <point x="826.7234915031446" y="692.4320853726222" />
+      <point x="850.7234915031446" y="692.4320853726222" />
+      <point x="32.5" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.They" target="org.michaelb.lab3.story.objects.Hat" relationship="TO_MANY">
+      <point x="-47.75" y="-82.5" />
+      <point x="216.49853062677414" y="965.4320853726222" />
+      <point x="112.4854242104999" y="965.4320853726222" />
+      <point x="112.4854242104999" y="473.43208537262217" />
+      <point x="317.87353062677414" y="473.43208537262217" />
+      <point x="317.87353062677414" y="463.43208537262217" />
+      <point x="347.0470535759929" y="463.43208537262217" />
+      <point x="-63.0" y="93.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.objects.Homes" relationship="DEPENDENCY">
+      <point x="-104.625" y="-93.5" />
+      <point x="823.3921350316969" y="1105.0" />
+      <point x="1368.980966353679" y="1105.0" />
+      <point x="1368.980966353679" y="1085.0" />
+      <point x="1553.7857394366197" y="1085.0" />
+      <point x="1553.7857394366197" y="822.0" />
+      <point x="1675.8499608763705" y="822.0" />
+      <point x="47.75" y="71.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy" target="org.michaelb.lab3.story.interfaces.Laughable" relationship="REALIZATION">
+      <point x="101.60000000000002" y="-104.5" />
+      <point x="669.5985306267742" y="702.4320853726222" />
+      <point x="826.7234915031446" y="702.4320853726222" />
+      <point x="826.7234915031446" y="692.4320853726222" />
+      <point x="850.7234915031446" y="692.4320853726222" />
+      <point x="32.5" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.enums.SeeingType" relationship="DEPENDENCY">
+      <point x="-104.625" y="-93.5" />
+      <point x="823.3921350316969" y="1105.0" />
+      <point x="1368.980966353679" y="1105.0" />
+      <point x="1368.980966353679" y="1085.0" />
+      <point x="1373.9853963315186" y="1085.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.objects.AirBalloon" relationship="DEPENDENCY">
+      <point x="-104.625" y="-93.5" />
+      <point x="823.3921350316969" y="1105.0" />
+      <point x="1368.980966353679" y="1105.0" />
+      <point x="1368.980966353679" y="1085.0" />
+      <point x="1213.2857394366197" y="1085.0" />
+      <point x="1213.2857394366197" y="303.0" />
+      <point x="1390.531104131221" y="303.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Grumpy" target="org.michaelb.lab3.story.interfaces.Laughable" relationship="REALIZATION">
+      <point x="-47.749999999999886" y="-93.0" />
+      <point x="905.7485306267743" y="702.4320853726222" />
+      <point x="826.7234915031446" y="702.4320853726222" />
+      <point x="826.7234915031446" y="692.4320853726222" />
+      <point x="850.7234915031446" y="692.4320853726222" />
+      <point x="32.5" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Homes" target="org.michaelb.lab3.story.objects.AirBalloon" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1580.3499608763705" y="303.0" />
+      <point x="1390.531104131221" y="303.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy" target="org.michaelb.lab3.story.abstractions.Human" relationship="GENERALIZATION">
+      <point x="50.799999999999955" y="-104.5" />
+      <point x="618.7985306267741" y="702.4320853726222" />
+      <point x="643.5735306267741" y="702.4320853726222" />
+      <point x="643.5735306267741" y="473.43208537262217" />
+      <point x="914.8480741176277" y="473.43208537262217" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.AirBalloon" target="org.michaelb.lab3.story.exceptions.NoMoreFuelException" relationship="DEPENDENCY">
+      <point x="51.5" y="-137.5" />
+      <point x="1442.031104131221" y="-30.0" />
+      <point x="1701.6547729398235" y="-30.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy.Hand" target="org.michaelb.lab3.story.exceptions.NoHatOnException" relationship="DEPENDENCY">
+      <point x="-73.0" y="-38.0" />
+      <point x="437.9568639601074" y="975.4320853726222" />
+      <point x="254.3604242104999" y="975.4320853726222" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Shorty" target="org.michaelb.lab3.story.abstractions.Human" relationship="GENERALIZATION">
+      <point x="0.0" y="-82.5" />
+      <point x="1078.0479339770948" y="473.43208537262217" />
+      <point x="914.8480741176277" y="473.43208537262217" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Homes" target="org.michaelb.lab3.story.interfaces.Seeable" relationship="REALIZATION">
+      <point x="47.75" y="-71.0" />
+      <point x="1675.8499608763705" y="603.0" />
+      <point x="1931.407147766217" y="603.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy" target="org.michaelb.lab3.story.objects.Hat" relationship="DEPENDENCY">
+      <point x="0.0" y="-104.5" />
+      <point x="567.9985306267741" y="702.4320853726222" />
+      <point x="594.3425251494657" y="702.4320853726222" />
+      <point x="594.3425251494657" y="463.43208537262217" />
+      <point x="473.0470535759929" y="463.43208537262217" />
+      <point x="63.0" y="93.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Residents" target="org.michaelb.lab3.story.objects.AirBalloon" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1633.7954649525386" y="832.0" />
+      <point x="1274.6547339593112" y="832.0" />
+      <point x="1274.6547339593112" y="812.0" />
+      <point x="1238.7958291124437" y="812.0" />
+      <point x="1238.7958291124437" y="303.0" />
+      <point x="1390.531104131221" y="303.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy" target="org.michaelb.lab3.story.objects.ConfusionGuy.Head" relationship="TO_ONE">
+      <point x="-101.60000000000002" y="-104.5" />
+      <point x="466.3985306267741" y="702.4320853726222" />
+      <point x="414.98779119015444" y="702.4320853726222" />
+      <point x="-34.75" y="49.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.AirBalloon" target="org.michaelb.lab3.story.interfaces.Flyable" relationship="REALIZATION">
+      <point x="-51.5" y="-137.5" />
+      <point x="1339.031104131221" y="-20.0" />
+      <point x="965.246210648421" y="-20.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy" target="org.michaelb.lab3.story.objects.ConfusionGuy.Hand" relationship="TO_ONE">
+      <point x="-84.66666666666663" y="104.5" />
+      <point x="483.3318639601075" y="975.4320853726222" />
+      <point x="510.9568639601074" y="975.4320853726222" />
+      <point x="0.0" y="-38.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.They" target="org.michaelb.lab3.story.exceptions.NoHatOnException" relationship="DEPENDENCY">
+      <point x="47.75" y="-82.5" />
+      <point x="311.99853062677414" y="975.4320853726222" />
+      <point x="254.3604242104999" y="975.4320853726222" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.interfaces.Seeable" relationship="REALIZATION">
+      <point x="104.625" y="-93.5" />
+      <point x="1032.6421350316969" y="1116.261416123757" />
+      <point x="1931.407147766217" y="1116.261416123757" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Wind" target="org.michaelb.lab3.story.interfaces.Flyable" relationship="REALIZATION">
+      <point x="-55.0" y="-82.0" />
+      <point x="652.4436823524434" y="-20.0" />
+      <point x="965.246210648421" y="-20.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Wind" target="org.michaelb.lab3.story.objects.AirBalloon" relationship="DEPENDENCY">
+      <point x="55.0" y="-82.0" />
+      <point x="762.4436823524434" y="303.0" />
+      <point x="1390.531104131221" y="303.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy.Head" target="org.michaelb.lab3.story.objects.Hat" relationship="TO_ONE">
+      <point x="0.0" y="-49.0" />
+      <point x="449.73779119015444" y="473.43208537262217" />
+      <point x="317.87353062677414" y="473.43208537262217" />
+      <point x="317.87353062677414" y="463.43208537262217" />
+      <point x="347.0470535759929" y="463.43208537262217" />
+      <point x="-63.0" y="93.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.interfaces.Seeable" target="org.michaelb.lab3.story.objects.AirBalloon" relationship="DEPENDENCY">
+      <point x="0.0" y="-26.5" />
+      <point x="1931.407147766217" y="303.0" />
+      <point x="1390.531104131221" y="303.0" />
+      <point x="0.0" y="137.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.ConfusionGuy.Head" target="org.michaelb.lab3.story.objects.ConfusionGuy" relationship="INNER_CLASS">
+      <point x="34.75" y="49.0" />
+      <point x="484.48779119015444" y="702.4320853726222" />
+      <point x="517.1985306267741" y="702.4320853726222" />
+      <point x="-50.80000000000007" y="-104.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.objects.Residents" relationship="TO_ONE">
+      <point x="34.875" y="-93.5" />
+      <point x="962.8921350316969" y="1095.0" />
+      <point x="1633.7954649525386" y="1095.0" />
+      <point x="-47.75" y="71.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Grumpy" target="org.michaelb.lab3.story.abstractions.Human" relationship="GENERALIZATION">
+      <point x="47.750000000000114" y="-93.0" />
+      <point x="1001.2485306267743" y="702.4320853726222" />
+      <point x="914.8480741176277" y="702.4320853726222" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Homes" target="org.michaelb.lab3.story.objects.Home" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1580.3499608763705" y="593.0" />
+      <point x="1701.6547729398235" y="593.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.FlowerCity" target="org.michaelb.lab3.story.abstractions.City" relationship="GENERALIZATION">
+      <point x="-34.875" y="-93.5" />
+      <point x="893.1421350316969" y="1129.935992845462" />
+      <point x="1456.7857394366197" y="1129.935992845462" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.objects.Homes" target="org.michaelb.lab3.story.enums.SeeingType" relationship="DEPENDENCY">
+      <point x="-47.75" y="-71.0" />
+      <point x="1580.3499608763705" y="583.0" />
+      <point x="1373.9853963315186" y="583.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="org.michaelb.lab3.story.abstractions.City" target="org.michaelb.lab3.story.objects.Homes" relationship="TO_ONE">
+      <point x="0.0" y="-49.0" />
+      <point x="1456.7857394366197" y="812.0" />
+      <point x="1580.3499608763705" y="812.0" />
+      <point x="-47.75" y="71.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.2431829040102493" showDependencies="true" x="1465.2845698276265" y="774.3158676410433" />
+  <SelectedNodes>
+    <node>org.michaelb.lab3.story.objects.AirBalloon</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

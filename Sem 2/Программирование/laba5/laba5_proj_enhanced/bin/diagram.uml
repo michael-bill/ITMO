@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/mihailbilosickij/Yandex.Disk.localized/ITMO/Sem 2/Программирование/laba5/laba5_proj_enhanced</OriginalElement>
+  <nodes>
+    <node x="242.0" y="1764.5">src.commands.Exit</node>
+    <node x="2040.6875" y="1643.0">src.Interpreter</node>
+    <node x="752.15375" y="2107.0">src.commands.ReplaceIfLowe</node>
+    <node x="1352.0625" y="1753.5">src.commands.RemoveKey</node>
+    <node x="549.15375" y="2118.0">src.commands.Save</node>
+    <node x="1217.15375" y="2107.0">src.commands.Update</node>
+    <node x="723.0625" y="432.0">src.product.UnitOfMeasure</node>
+    <node x="986.15375" y="2107.0">src.commands.ExecuteScript</node>
+    <node x="1287.0625" y="17.0">src.product.Location</node>
+    <node x="2608.65375" y="1217.0">src.DataBase</node>
+    <node x="1437.15375" y="2118.0">src.commands.Help</node>
+    <node x="1634.6875" y="1764.5">src.commands.Clear</node>
+    <node x="2680.6875" y="1753.5">src.commands.RemoveLower</node>
+    <node x="3115.6875" y="1753.5">src.commands.RemoveLowerKey</node>
+    <node x="102.0" y="2273.0">src.Main</node>
+    <node x="795.5899999999999" y="713.0">src.product.Product</node>
+    <node x="992.0625" y="299.0">src.product.Person</node>
+    <node x="1837.6875" y="1764.5">src.commands.Info</node>
+    <node x="-221.0" y="1721.5">src.commands.Insertable</node>
+    <node x="2904.6875" y="1764.5">src.commands.MinByName</node>
+    <node x="2362.6875" y="1764.5">src.commands.PrintUniqueManufactureCost</node>
+    <node x="1380.3125" y="1339.0">src.commands.Command</node>
+    <node x="2360.40375" y="2107.0">src.commands.Insert</node>
+    <node x="490.0625" y="398.0">src.product.Coordinates</node>
+    <node x="-221.0" y="2273.0">src.product.ExceptionMessages</node>
+    <node x="1072.0625" y="1764.5">src.commands.GroupCountingByPrice</node>
+    <node x="851.0625" y="84.0">src.product.Color</node>
+    <node x="869.0625" y="1764.5">src.commands.Show</node>
+    <node x="1060.0625" y="84.0">src.product.Country</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="src.commands.ExecuteScript" target="src.Interpreter" relationship="TO_ONE">
+      <point x="52.75" y="-60.5" />
+      <point x="1144.40375" y="2066.0" />
+      <point x="2191.6875" y="2066.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Help" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-45.75" y="-49.5" />
+      <point x="1482.90375" y="2026.0" />
+      <point x="858.5625" y="2026.0" />
+      <point x="858.5625" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Show" target="src.DataBase" relationship="TO_ONE">
+      <point x="45.75" y="-49.5" />
+      <point x="1006.3125" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.RemoveLower" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-51.0" y="-60.5" />
+      <point x="2731.6875" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.product.Person" target="src.product.Location" relationship="TO_ONE">
+      <point x="0.0" y="-182.0" />
+      <point x="1179.0625" y="274.0" />
+      <point x="1412.5625" y="274.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="src.commands.RemoveLower" target="src.DataBase" relationship="TO_ONE">
+      <point x="51.0" y="-60.5" />
+      <point x="2833.6875" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.GroupCountingByPrice" target="src.DataBase" relationship="TO_ONE">
+      <point x="65.0" y="-49.5" />
+      <point x="1267.0625" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Info" target="src.DataBase" relationship="TO_ONE">
+      <point x="45.75" y="-49.5" />
+      <point x="1974.9375" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.product.Product" target="src.product.UnitOfMeasure" relationship="TO_ONE">
+      <point x="0.0" y="-226.0" />
+      <point x="1001.0899999999999" y="688.0" />
+      <point x="847.5625" y="688.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Insert" target="src.commands.Insertable" relationship="REALIZATION">
+      <point x="-50.0" y="-60.5" />
+      <point x="2410.40375" y="2086.0" />
+      <point x="1562.5625" y="2086.0" />
+      <point x="1562.5625" y="2016.0" />
+      <point x="623.2149999999999" y="2016.0" />
+      <point x="623.2149999999999" y="2006.0" />
+      <point x="0.0" y="2006.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="src.commands.PrintUniqueManufactureCost" target="src.DataBase" relationship="TO_ONE">
+      <point x="74.5" y="-49.5" />
+      <point x="2586.1875" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.RemoveLowerKey" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-56.25" y="-60.5" />
+      <point x="3171.9375" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.ExecuteScript" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-52.75" y="-60.5" />
+      <point x="1038.90375" y="2036.0" />
+      <point x="739.8399999999999" y="2036.0" />
+      <point x="739.8399999999999" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.RemoveKey" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-50.0" y="-60.5" />
+      <point x="1402.0625" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Save" target="src.Interpreter" relationship="TO_ONE">
+      <point x="45.75" y="-49.5" />
+      <point x="686.40375" y="2066.0" />
+      <point x="2191.6875" y="2066.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Insertable" target="src.product.Product" relationship="DEPENDENCY">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="1191.0" />
+      <point x="898.3399999999999" y="1191.0" />
+      <point x="-102.75" y="226.0" />
+    </edge>
+    <edge source="src.commands.Help" target="src.Interpreter" relationship="TO_ONE">
+      <point x="45.75" y="-49.5" />
+      <point x="1574.40375" y="2066.0" />
+      <point x="2191.6875" y="2066.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.Interpreter" target="src.DataBase" relationship="TO_ONE">
+      <point x="0.0" y="-171.0" />
+      <point x="2191.6875" y="1621.0" />
+      <point x="2164.40375" y="1621.0" />
+      <point x="2164.40375" y="1591.0" />
+      <point x="2749.15375" y="1591.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Save" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-45.75" y="-49.5" />
+      <point x="594.90375" y="2066.0" />
+      <point x="231.5" y="2066.0" />
+      <point x="231.5" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Show" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-45.75" y="-49.5" />
+      <point x="914.8125" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Clear" target="src.DataBase" relationship="TO_ONE">
+      <point x="45.75" y="-49.5" />
+      <point x="1771.9375" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.MinByName" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-47.75" y="-49.5" />
+      <point x="2952.4375" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Exit" target="src.commands.Command" relationship="REALIZATION">
+      <point x="0.0" y="-49.5" />
+      <point x="333.5" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.DataBase" target="src.product.Product" relationship="TO_MANY">
+      <point x="0.0" y="-171.0" />
+      <point x="2749.15375" y="1191.0" />
+      <point x="1103.84" y="1191.0" />
+      <point x="102.75" y="226.0" />
+    </edge>
+    <edge source="src.commands.Update" target="src.Interpreter" relationship="TO_ONE">
+      <point x="50.0" y="-60.5" />
+      <point x="1367.15375" y="2066.0" />
+      <point x="2191.6875" y="2066.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.MinByName" target="src.DataBase" relationship="TO_ONE">
+      <point x="47.75" y="-49.5" />
+      <point x="3047.9375" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Update" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-50.0" y="-60.5" />
+      <point x="1267.15375" y="2076.0" />
+      <point x="745.6875" y="2076.0" />
+      <point x="745.6875" y="2056.0" />
+      <point x="750.9375" y="2056.0" />
+      <point x="750.9375" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.product.Person" target="src.product.Country" relationship="TO_ONE">
+      <point x="0.0" y="-182.0" />
+      <point x="1179.0625" y="274.0" />
+      <point x="1163.5625" y="274.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Insert" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-50.0" y="-60.5" />
+      <point x="2410.40375" y="2086.0" />
+      <point x="1562.5625" y="2086.0" />
+      <point x="1562.5625" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.ReplaceIfLowe" target="src.Interpreter" relationship="TO_ONE">
+      <point x="53.5" y="-60.5" />
+      <point x="912.65375" y="2066.0" />
+      <point x="2191.6875" y="2066.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Info" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-45.75" y="-49.5" />
+      <point x="1883.4375" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Insert" target="src.Interpreter" relationship="TO_ONE">
+      <point x="50.0" y="-60.5" />
+      <point x="2510.40375" y="2086.0" />
+      <point x="3351.1875" y="2086.0" />
+      <point x="3351.1875" y="2056.0" />
+      <point x="2191.6875" y="2056.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Clear" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-45.75" y="-49.5" />
+      <point x="1680.4375" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.GroupCountingByPrice" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-65.0" y="-49.5" />
+      <point x="1137.0625" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.RemoveLowerKey" target="src.DataBase" relationship="TO_ONE">
+      <point x="56.25" y="-60.5" />
+      <point x="3284.4375" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.Update" target="src.commands.Insertable" relationship="REALIZATION">
+      <point x="-50.0" y="-60.5" />
+      <point x="1267.15375" y="2076.0" />
+      <point x="745.6875" y="2076.0" />
+      <point x="745.6875" y="2046.0" />
+      <point x="623.2149999999999" y="2046.0" />
+      <point x="623.2149999999999" y="2006.0" />
+      <point x="0.0" y="2006.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="src.commands.PrintUniqueManufactureCost" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-74.5" y="-49.5" />
+      <point x="2437.1875" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.commands.Insert" target="src.DataBase" relationship="TO_ONE">
+      <point x="50.0" y="-60.5" />
+      <point x="2510.40375" y="2086.0" />
+      <point x="3351.1875" y="2086.0" />
+      <point x="3351.1875" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.RemoveKey" target="src.DataBase" relationship="TO_ONE">
+      <point x="50.0" y="-60.5" />
+      <point x="1502.0625" y="1601.0" />
+      <point x="2749.15375" y="1601.0" />
+      <point x="0.0" y="171.0" />
+    </edge>
+    <edge source="src.commands.ReplaceIfLowe" target="src.commands.Command" relationship="REALIZATION">
+      <point x="-53.5" y="-60.5" />
+      <point x="805.65375" y="2086.0" />
+      <point x="442.25" y="2086.0" />
+      <point x="442.25" y="1611.0" />
+      <point x="1269.5625" y="1611.0" />
+      <point x="1269.5625" y="1591.0" />
+      <point x="1430.3125" y="1591.0" />
+      <point x="-50.0" y="49.0" />
+    </edge>
+    <edge source="src.product.Product" target="src.product.Coordinates" relationship="TO_ONE">
+      <point x="0.0" y="-226.0" />
+      <point x="1001.0899999999999" y="688.0" />
+      <point x="596.5625" y="688.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="src.commands.ReplaceIfLowe" target="src.commands.Insertable" relationship="REALIZATION">
+      <point x="-53.5" y="-60.5" />
+      <point x="805.65375" y="2086.0" />
+      <point x="442.25" y="2086.0" />
+      <point x="442.25" y="2076.0" />
+      <point x="623.2149999999999" y="2076.0" />
+      <point x="623.2149999999999" y="2006.0" />
+      <point x="0.0" y="2006.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="src.product.Product" target="src.product.Person" relationship="TO_ONE">
+      <point x="0.0" y="-226.0" />
+      <point x="1001.0899999999999" y="688.0" />
+      <point x="1179.0625" y="688.0" />
+      <point x="0.0" y="182.0" />
+    </edge>
+    <edge source="src.Interpreter" target="src.commands.Command" relationship="TO_MANY">
+      <point x="0.0" y="-171.0" />
+      <point x="2191.6875" y="1621.0" />
+      <point x="2164.40375" y="1621.0" />
+      <point x="2164.40375" y="1581.0" />
+      <point x="1530.3125" y="1581.0" />
+      <point x="50.0" y="49.0" />
+    </edge>
+    <edge source="src.product.Person" target="src.product.Color" relationship="TO_ONE">
+      <point x="0.0" y="-182.0" />
+      <point x="1179.0625" y="274.0" />
+      <point x="945.5625" y="274.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.3892100192678227" showDependencies="true" x="1351.6930693069303" y="733.3316831683173" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

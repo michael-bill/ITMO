@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+>
+<head>
+    <title>Laba3 | Points</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+<header>
+    <p>Билошицкий Михаил Владимирович, Группа P3216, Вариант 133212</p>
+</header>
+<h:form>
+<div class="wrapper">
+    <canvas id="graph_canvas" width="500" height="500"></canvas>
+        <div class="input-area">
+            <h:commandButton value="Стартовая страница" action="go-to-index" />
+            <br/>
+            <br/>
+            <h:outputLabel value="X = " for="x_select"/>
+            <h:selectOneMenu id="x_select" value="#{pointBean.x}">
+                <f:selectItem itemValue="-1.5" itemLabel="-1.5"/>
+                <f:selectItem itemValue="-1.0" itemLabel="-1.0"/>
+                <f:selectItem itemValue="-0.5" itemLabel="-0.5"/>
+                <f:selectItem itemValue="0.0" itemLabel="0.0"/>
+                <f:selectItem itemValue="0.5" itemLabel="0.5"/>
+                <f:selectItem itemValue="1.0" itemLabel="1.0"/>
+                <f:selectItem itemValue="1.5" itemLabel="1.5"/>
+                <f:selectItem itemValue="2.0" itemLabel="2.0"/>
+            </h:selectOneMenu>
+
+            <br/>
+            <h:outputLabel value="Y = " for="y_pos"/>
+            <h:inputText id="y_pos" value="#{pointBean.y}" />
+
+            <fieldset>
+                <legend>R = </legend>
+                <div><h:selectBooleanCheckbox id="r_1" value="#{pointBean.r1}"/><h:outputLabel value="1"/></div>
+                <div><h:selectBooleanCheckbox id="r_1dot5" value="#{pointBean.r1dot5}"/><h:outputLabel value="1.5"/></div>
+                <div><h:selectBooleanCheckbox id="r_2" value="#{pointBean.r2}"/><h:outputLabel value="2"/></div>
+                <div><h:selectBooleanCheckbox id="r_2dot5" value="#{pointBean.r2dot5}"/><h:outputLabel value="2.5"/></div>
+                <div><h:selectBooleanCheckbox id="r_3" value="#{pointBean.r3}"/><h:outputLabel value="3"/></div>
+            </fieldset>
+
+            <h:inputHidden id="hiddenValueX" value="#{pointBean.x}" />
+            <h:inputHidden id="hiddenValueY" value="#{pointBean.y}" />
+
+            <p:commandButton id="check_button" value="Проверить" action="#{pointBean.processRequest}" update="table_result"/>
+            <p:commandButton id="clear_button" value="Очистить историю" action="#{pointsStorageBean.clearHistory}" update="table_result" />
+        </div>
+    </div>
+    <p:dataTable id="table_result" value="#{pointsStorageBean.historyList}" var="point">
+        <p:column headerText="X">
+            <h:outputText value="#{point.x}" />
+        </p:column>
+        <p:column headerText="Y">
+            <h:outputText value="#{point.y}" />
+        </p:column>
+        <p:column headerText="R">
+            <h:outputText value="#{point.r}" />
+        </p:column>
+        <p:column headerText="Попадание">
+            <h:outputText value="#{point.validation}" />
+        </p:column>
+        <p:column headerText="Текущее время">
+            <h:outputText value="#{point.currentTime}" />
+        </p:column>
+    </p:dataTable>
+</h:form>
+<script type="application/javascript" src="scripts/script.js"></script>
+</body>
+</html>

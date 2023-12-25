@@ -1,0 +1,1 @@
+execute_script /Users/mihailbilosickij/Yandex.Disk.localized/ITMO/Sem 2/Программирование/laba6/json_files/1.txt
