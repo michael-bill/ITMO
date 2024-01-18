@@ -1,12 +1,14 @@
 package org.michael.laba4_back.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import static org.michael.laba4_back.Utils.getMessage;
 
 @RestController
 public class HelloWorldController {
-    @GetMapping(value = "/hello", produces = "application/json")
+    @RequestMapping(value = "/hello", produces = "application/json")
     public String hello() {
-        return "{ \"message\": \"Hello World!\" }";
+        return getMessage("Hello, World!");
     }
 }
