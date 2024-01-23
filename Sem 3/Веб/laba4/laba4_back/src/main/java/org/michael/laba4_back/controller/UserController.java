@@ -1,5 +1,6 @@
 package org.michael.laba4_back.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.michael.laba4_back.model.AuthToken;
 import org.michael.laba4_back.model.User;
 import org.michael.laba4_back.repository.AuthTokenRepository;
@@ -27,7 +28,7 @@ public class UserController {
     private AuthTokenRepository authTokenRepository;
 
     @PostMapping(value = "/user-reg", produces = "application/json")
-    public ResponseEntity<String> addUser(@RequestParam String login, @RequestParam String pass) throws NoSuchAlgorithmException {
+    public ResponseEntity<String> addUser(@RequestParam String login, @RequestParam String pass) {
         int LOGIN_LENGTH = 4;
         int PASS_LENGTH = 8;
         if (login.length() < LOGIN_LENGTH) {
@@ -46,7 +47,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/user-auth", produces = "application/json")
-    public ResponseEntity<String> authUser(@RequestParam String login, @RequestParam String pass) throws NoSuchAlgorithmException {
+    public ResponseEntity<String> authUser(@RequestParam String login, @RequestParam String pass) {
         User user = userRepository.findByLogin(login);
         if (user == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(getMessage("User not found"));
@@ -64,10 +65,11 @@ public class UserController {
     }
 
     @GetMapping(value = "/user-logout", produces = "application/json")
-    public ResponseEntity<String> logoutUser(@RequestParam String authToken) {
-        AuthToken token = authTokenRepository.findByToken(authToken);
+    public ResponseEntity<String> logoutUser(HttpServletRequest request) {
+        String tokenHeader = request.getHeader("auth-token");
+        AuthToken token = authTokenRepository.findByToken(tokenHeader);
         if (token == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(getMessage("Wrong token"));
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(getMessage("Wrong token or user not logged in"));
         }
         authTokenRepository.deleteByUserId(token.getUser().getId());
         return ResponseEntity.ok(getMessage("User logged out"));
