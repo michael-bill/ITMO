@@ -9,10 +9,7 @@ import org.michael.laba4_back.repository.PointRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -35,13 +32,8 @@ public class PointController {
             @RequestParam double r,
             HttpServletRequest request
     ) {
-        String tokenHeader = request.getHeader("auth-token");
-        AuthToken token = authTokenRepository.findByToken(tokenHeader);
-        if (token == null) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(getMessage("Wrong auth token"));
-        } else if (token.isExpired()) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(getMessage("Auth token expired"));
-        } else if (!Point.isValid(x, y, r)) {
+        AuthToken token = authTokenRepository.findByToken(request.getHeader("auth-token"));
+        if (!Point.isValid(x, y, r)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(getMessage("Invalid values"));
         }
         Point point = new Point(x, y, r, Point.isHit(x, y, r), LocalDateTime.now(), token.getUser());
@@ -51,13 +43,14 @@ public class PointController {
 
     @GetMapping(value = "/point", produces = "application/json")
     public ResponseEntity<String> getPoints(HttpServletRequest request) {
-        String tokenHeader = request.getHeader("auth-token");
-        AuthToken token = authTokenRepository.findByToken(tokenHeader);
-        if (token == null) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(getMessage("Wrong auth token"));
-        } else if (token.isExpired()) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(getMessage("Auth token expired"));
-        }
+        AuthToken token = authTokenRepository.findByToken(request.getHeader("auth-token"));
         return ResponseEntity.ok(gson.toJson(pointRepository.findByUserId(token.getUser().getId())));
+    }
+
+    @DeleteMapping(value = "/point", produces = "application/json")
+    public ResponseEntity<String> deletePoints(HttpServletRequest request) {
+        AuthToken token = authTokenRepository.findByToken(request.getHeader("auth-token"));
+        pointRepository.deleteByUserId(token.getUser().getId());
+        return ResponseEntity.ok(getMessage("Points deleted"));
     }
 }
