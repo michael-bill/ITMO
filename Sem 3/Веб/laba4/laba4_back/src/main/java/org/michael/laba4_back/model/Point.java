@@ -28,7 +28,7 @@ public class Point {
     public static boolean isValid(double x, double y, double r) {
         boolean xOk = -4 <= x && x <= 4;
         boolean yOk = -3 <= y && y <= 5 && y != -3 && y != 5;
-        boolean rOk = -4 <= r && r <= 4;
+        boolean rOk = 0.1 <= r && r <= 4;
         return xOk && yOk && rOk;
     }
 

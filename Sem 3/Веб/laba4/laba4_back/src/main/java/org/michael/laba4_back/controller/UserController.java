@@ -15,15 +15,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 
 import static org.michael.laba4_back.Utils.*;
 
 @RestController
 public class UserController {
+
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private AuthTokenRepository authTokenRepository;
 

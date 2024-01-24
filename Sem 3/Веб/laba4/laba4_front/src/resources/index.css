@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-image: url("background.jpg");
+  color: black;
+  font-family: 'Ubuntu Mono', monospace;;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: #ffffff;
+}
