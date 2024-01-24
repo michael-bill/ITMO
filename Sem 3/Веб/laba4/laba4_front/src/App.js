@@ -40,7 +40,7 @@ const App = () => {
                   </li>
                   <li>
                     <Link to={"/register"} className="nav-link">
-                      Register
+                      Sign up
                     </Link>
                   </li>
                   </>

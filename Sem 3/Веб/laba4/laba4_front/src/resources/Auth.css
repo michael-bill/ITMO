@@ -1,5 +1,5 @@
 .auth-block {
-    width: 400px;
+    width: 425px;
     height: 30%;
     text-align: center;
     line-height: 90%;
@@ -38,5 +38,6 @@
     flex-direction: row-reverse;
     margin-top: 10px;
     margin-right: 27px;
-    color: red;
+    margin-left: 27px;
+    font-size: 18px;
 }

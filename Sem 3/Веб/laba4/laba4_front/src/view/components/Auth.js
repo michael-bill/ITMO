@@ -39,7 +39,7 @@ const Auth = (props) => {
             return false;
         }
         if (user.username.length < MIN_USERNAME_LENGTH) {
-            setMessage({ ...message, username: "Username is too short!"});
+            setMessage({ ...message, username: "Username needs to be at least " + MIN_USERNAME_LENGTH + " characters long"});
             return false;
         }
 
@@ -49,7 +49,7 @@ const Auth = (props) => {
 
     const validatePassword = useCallback(() => {
         if (user.password.length < MIN_PASSWORD_LENGTH) {
-            setMessage({ ...message, password: "Password is too short!"});
+            setMessage({ ...message, password: "Password needs to be at least " + MIN_PASSWORD_LENGTH + " characters long"});
             return false;
         }
 
