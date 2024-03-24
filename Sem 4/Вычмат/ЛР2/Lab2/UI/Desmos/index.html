@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            #calculator {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+        </style>
+        <script>
+            let calculator;
+            let bounds = [-1, 1];
+            let graph = ``;
+            function init() {
+                calculator = Desmos.GraphingCalculator(document.getElementById('calculator'), {
+                    settingsMenu: false,
+                    keypad: false,
+                    expressions: false,
+                    language: 'ru'
+                });
+            }
+            function expression(latex) {
+                graph = latex;
+                calculator.setExpression({
+                    id: 'graphShadow',
+                    latex: latex,
+                    color: 'blue',
+                    lineStyle: Desmos.Styles.DASHED,
+                    lineWidth: 1
+                });
+                calculator.setExpression({
+                    id: 'graph',
+                    latex: latex + `\\left\\{${bounds[0]}<x<${bounds[1]}\\right\\}`,
+                    color: 'red',
+                });
+            }
+            function expressions(values) {
+                let colors = ['red', 'blue', 'green', 'black'];
+                for (i in values) {
+                    let latex = values[i];
+                    calculator.setExpression({
+                        id: 'graph' + i,
+                        latex: latex,
+                        color: colors[i % 4],
+                    });
+                }
+            }
+            function setBounds(left, right) {
+                bounds = [left, right];
+                if(graph.length > 0)
+                    expression(graph);
+            }
+            function clear() {
+                for (i of calculator.getExpressions())
+                    calculator.removeExpression({ id: i.id });
+                graph = ``;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="calculator"></div>
+        <script>
+            init();
+            //expression(`x\\left\\{x>0\\right\\}`);
+        </script>
+    </body>
+</html>
