@@ -13,7 +13,7 @@ class Result:
         self.message = message
         self.equation = equation
         self.table = table
-        self.decimal_places = 3
+        self.decimal_places = 10
 
     def __str__(self) -> str:
         a = round(self.equation.a, self.decimal_places)

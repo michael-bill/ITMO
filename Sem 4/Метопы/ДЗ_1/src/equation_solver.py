@@ -11,6 +11,7 @@ class Equation:
         self.eps = eps
         self.max_iterations = max_iterations
     
+    # Метод библиотеки scipy
     def python_method(self) -> Result:
         method_name = "Библиотека Python"
         try:
@@ -20,6 +21,7 @@ class Equation:
         except ValueError as e:
             return Result(success=False, message=str(e), method_name=method_name, equation=self)
 
+    # Метод половинного деления
     def bisection_method(self) -> Result:
             method_name = "Половинного деления"
             table = [["#", "a", "b", "f(x1)", "f(x2)", "|a-b|"]]
@@ -50,6 +52,7 @@ class Equation:
 
             return Result((a + b) / 2.0, i, method_name, self, table)
 
+    # Метод Ньютона
     def newton_method(self) -> Result:
         method_name = "Ньютона"
         table = [["#", "x_i", "f(x)", "f'(x)", "x_{i+1}"]]
@@ -91,7 +94,7 @@ class Equation:
 
         return Result(x0, i, method_name, self, table)
 
-    # я ваще хз, оно походу не работает
+    # Метод золотого сечения
     def golden_section_method(self) -> Result:
         method_name = "Золотого сечения"
         table = [["#", "a", "b", "c", "d", "f(c)", "f(d)", "|a-b|"]]
