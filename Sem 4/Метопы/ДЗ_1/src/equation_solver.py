@@ -55,7 +55,7 @@ class Equation:
     # Метод Ньютона
     def newton_method(self) -> Result:
         method_name = "Ньютона"
-        table = [["#", "f(x)", "f'(x)"]]
+        table = [["#", "x", "f'(x)"]]
         
         a, b = self.a, self.b
         f = self.first_derivative
@@ -74,7 +74,6 @@ class Equation:
             i += 1
 
             x0 = a - f(a) / (f(b) - f(a)) * (b - a)
-            prev_x = x0
 
             if self.second_derivative(x0) == 0:
                 return Result(
@@ -90,7 +89,7 @@ class Equation:
             else:
                 a = x0
             
-            table.append([i, self.f(x0), self.first_derivative(x0)])
+            table.append([i, x0, f"{self.first_derivative(x0):.2e}" + "."])
 
         return Result(x0, i, method_name, self, table)
 

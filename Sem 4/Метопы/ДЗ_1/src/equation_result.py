@@ -13,7 +13,7 @@ class Result:
         self.message = message
         self.equation = equation
         self.table = table
-        self.decimal_places = 10
+        self.decimal_places = 15
 
     def __str__(self) -> str:
         a = round(self.equation.a, self.decimal_places)
@@ -31,4 +31,4 @@ class Result:
             f"{Fore.BLUE}Количество итераций{Fore.RESET}: {self.iterations}\n" + \
             f"{Fore.BLUE}Границы и точность{Fore.RESET}: a={a}, b={b}, eps={eps}\n" + \
             f"{Fore.BLUE}Уравнение{Fore.RESET}: {inspect.getsource(self.equation.f)}\n\n" + \
-            f"Таблица:\n{tabulate(self.table, headers='firstrow', tablefmt='grid')}"
+            f"Таблица:\n{tabulate(self.table, headers='firstrow', tablefmt='grid', floatfmt=f".{self.decimal_places}f")}"
