@@ -15,7 +15,7 @@ class Equation:
     def python_method(self) -> Result:
         method_name = "Библиотека Python"
         try:
-            result = root_scalar(self.f, bracket=[self.a, self.b], xtol=self.eps)
+            result = root_scalar(self.first_derivative, bracket=[self.a, self.b], xtol=self.eps)
             if result.converged: return Result(result.root, result.iterations, method_name, self)
             else: return None
         except ValueError as e:
@@ -27,7 +27,7 @@ class Equation:
             table = [["#", "a", "b", "f(x1)", "f(x2)", "|a-b|"]]
 
             a, b = self.a, self.b
-            f = self.f
+            f = self.first_derivative
             i = 0
 
             if f(a) * f(b) >= 0:
