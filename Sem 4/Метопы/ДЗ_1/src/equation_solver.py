@@ -55,13 +55,13 @@ class Equation:
         table = [["#", "x_i", "f(x)", "f'(x)", "x_{i+1}"]]
         
         a, b = self.a, self.b
-        f = self.f
+        f = self.first_derivative
         i = 0
 
-        if f(a) * f(b) >= 0:
+        if self.first_derivative(a) * self.first_derivative(b) >= 0:
             return Result(
                 success=False,
-                message="Метод не применим. f(a) и f(b) Должны иметь разные знаки.",
+                message="Метод не применим. f'(a) и f'(b) Должны иметь разные знаки.",
                 method_name=method_name,
                 equation=self)
 
@@ -73,7 +73,7 @@ class Equation:
             x0 = a - f(a) / (f(b) - f(a)) * (b - a)
             prev_x = x0
 
-            if self.first_derivative(x0) == 0:
+            if self.second_derivative(x0) == 0:
                 return Result(
                     success=False,
                     message="Метод не применим. f'(x0) = 0.",
