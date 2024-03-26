@@ -24,7 +24,7 @@ class Equation:
     # Метод половинного деления
     def bisection_method(self) -> Result:
             method_name = "Половинного деления"
-            table = [["#", "a", "b", "f(x1)", "f(x2)", "|a-b|"]]
+            table = [["#", "a", "b"]]
 
             a, b = self.a, self.b
             f = self.first_derivative
@@ -48,14 +48,14 @@ class Equation:
                 else:
                     a = x0
                 
-                table.append([i, a, b, f(a), f(b), abs(b - a)])
+                table.append([i, a, b])
 
             return Result((a + b) / 2.0, i, method_name, self, table)
 
     # Метод Ньютона
     def newton_method(self) -> Result:
         method_name = "Ньютона"
-        table = [["#", "x_i", "f(x)", "f'(x)", "x_{i+1}"]]
+        table = [["#", "f(x)", "f'(x)"]]
         
         a, b = self.a, self.b
         f = self.first_derivative
@@ -90,14 +90,14 @@ class Equation:
             else:
                 a = x0
             
-            table.append([i, prev_x, f(x0), self.first_derivative(x0), x0])
+            table.append([i, self.f(x0), self.first_derivative(x0)])
 
         return Result(x0, i, method_name, self, table)
 
     # Метод золотого сечения
     def golden_section_method(self) -> Result:
         method_name = "Золотого сечения"
-        table = [["#", "a", "b", "c", "d", "f(c)", "f(d)", "|a-b|"]]
+        table = [["#", "a", "b"]]
 
         a, b = self.a, self.b
         f = self.f
@@ -121,7 +121,7 @@ class Equation:
                 a = c
                 fc, fd = fd, 0
 
-            table.append([i, a, b, c, d, fc, fd, abs(b - a)])
+            table.append([i, a, b])
             
             c = b - (b - a) / golden_ratio
             d = a + (b - a) / golden_ratio
