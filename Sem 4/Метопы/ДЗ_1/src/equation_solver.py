@@ -33,7 +33,7 @@ class Equation:
             if f(a) * f(b) >= 0:
                 return Result(
                     success=False,
-                    message="Метод не применим. f(a) и f(b) Должны иметь разные знаки.",
+                    message="Метод не применим. f'(a) и f'(b) Должны иметь разные знаки.",
                     method_name=method_name,
                     equation=self)
 
@@ -68,12 +68,12 @@ class Equation:
                 method_name=method_name,
                 equation=self)
 
-        x0 = None
+        x0 = a - f(a) / (f(b) - f(a)) * (b - a)
 
         while abs(f(a)) > self.eps and i < self.max_iterations:
             i += 1
 
-            x0 = a - f(a) / (f(b) - f(a)) * (b - a)
+            x0 = x0 - self.first_derivative(x0) / self.second_derivative(x0)
 
             if self.second_derivative(x0) == 0:
                 return Result(
